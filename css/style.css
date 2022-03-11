@@ -1,6 +1,29 @@
-#page {
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mdl-layout__header {
+  background-color: #607D8B;
+}
+
+.page-content {
   width: 100%;
   height: 100%;
+}
+.page-content #page {
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFEF;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-content #page .mdl-data-table {
+  width: 75%;
+  height: 60%;
 }
 
 /*# sourceMappingURL=style.css.map */
