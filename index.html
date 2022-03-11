@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Golf Score Card</title>
+        <link rel="stylesheet" href="mdl/material.min.css">
+        <script src="mdl/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+            <div id="page">
+                <table class="mdl-data-table mdl-js-data-table">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Name</th>
+                            <th>Age</th>
+                            <th>ID Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don Aubrey</td>
+                            <td>25</td>
+                            <td>49021</td>
+                          </tr>
+                          <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Sophia Carson</td>
+                            <td>32</td>
+                            <td>10258</td>
+                          </tr>
+                          <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Steve Moreno</td>
+                            <td>29</td>
+                            <td>12359</td>
+                          </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </main>
+  </div>
+    </body>
+    <script src="js/main.js"></script>
+</html>
