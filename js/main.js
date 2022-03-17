@@ -1,7 +1,8 @@
 const golfAPI = fetchGolf();
 
+golfAPI.then(displayCard);
 const golfHole = fetchHole();
-//golfAPI.then(displayCard);
+
 
 function fetchGolf(){
     return fetch('https://golf-courses-api.herokuapp.com/courses/').then(
@@ -18,13 +19,14 @@ function fetchHole(){
         );
     }
 function displayCard(card){
-    console.log(card);
+    //console.log(card);
     let htm = '';
     card.courses.forEach(item => {
-        console.log(item.name);
-        htm += `<div>${item.name}</div>`;
+        htm += `<span class="mdl-navigation__link clicky" onclick="setInfo('${item.image}')">${item.name}</span>`;
     });
-    document.getElementById('page').innerHTML = htm;
-    console.log(htm);
+    document.getElementById('navLinks').innerHTML = htm;
+    document.getElementById('navLinksSide').innerHTML = htm;
+    
+    // console.log(htm);
 
 }

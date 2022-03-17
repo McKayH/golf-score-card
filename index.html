@@ -13,61 +13,58 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">Course score card</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-        </nav>
+        <nav class="mdl-navigation mdl-layout--large-screen-only" id="navLinks"></nav>
       </div>
     </header>
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Title</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-      </nav>
+      <nav class="mdl-navigation" id="navLinksSide"></nav>
     </div>
     <main class="mdl-layout__content">
         <div class="page-content"><!-- Your content goes here -->
             <div id="page">
                 <h1>Golf Time Baby!!!</h1>
-                <table class="mdl-data-table mdl-js-data-table">
-                    <thead>
-                        <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Name</th>
-                            <th>Age</th>
-                            <th>ID Number</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don Aubrey</td>
-                            <td>25</td>
-                            <td>49021</td>
-                          </tr>
-                          <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Sophia Carson</td>
-                            <td>32</td>
-                            <td>10258</td>
-                          </tr>
-                          <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Steve Moreno</td>
-                            <td>29</td>
-                            <td>12359</td>
-                          </tr>
-                    </tbody>
-                  </table>
+                <table  class="mdl-data-table mdl-js-data-table">
+                  <thead>
+                    <tr>
+                      <th class="mdl-data-table__cell--non-numeric">Hole</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                      <th>10</th>
+                      <th>11</th>
+                      <th>12</th>
+                      <th>13</th>
+                      <th>14</th>
+                      <th>15</th>
+                      <th>16</th>
+                      <th>17</th>
+                      <th>18</th>
+                      <th>IN</th>
+                      <th>TOT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric"><input type="text" placeholder="Player"  maxlength="5" class="nameIn"></td>
+                    </tr>
+                  </tbody>
+                </table>                
             </div>
         </div>
     </main>
   </div>
     </body>
+    <script src="js/alter.js"></script>
     <script src="js/main.js"></script>
 </html>
