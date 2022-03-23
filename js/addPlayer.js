@@ -1,11 +1,17 @@
+class AddPlayer{
+    constructor(name){
+        this.name = name;
+        this.total = 0;
+    }
+}
+function inputInfo(img){
+    window.location.replace('inputInfo.html');
+}
+function addPlayer(value){
 
-function setInfo(item){
-    console.log(item);
-    const page = document.getElementById('page');
-    page.style.backgroundImage = `url('${item}')`;
 }
 
-{/* <td class="mdl-data-table__cell--non-numeric"><form action="#">
+/* <td class="mdl-data-table__cell--non-numeric"><form action="#">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
     <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
       <span id="something">0</span>
@@ -15,4 +21,4 @@ function setInfo(item){
       <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
     </div>
   </div>
-</form></td> */}
+</form></td> */

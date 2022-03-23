@@ -1,6 +1,6 @@
 const golfAPI = CoursApi();
 
-// golfAPI.then(displayCard);
+golfAPI.then(displayCard);
 const golfHole = fetchHole();
 
 
@@ -13,15 +13,11 @@ async function fetchHole(){
     return getting.json()
         
 }
-// function displayCard(card){
-//     console.log(card);
-//     let htm = '';
-//     card.courses.forEach(item => {
-//         htm += `<span class="clicky" onclick="setInfo('${item.image}')">${item.name}</span>`;
-//     });
-//     document.getElementById('navLinks').innerHTML = htm;
-//     document.getElementById('navLinksSide').innerHTML = htm;
-    
-    // console.log(htm);
-
-// }
+function displayCard(card){
+    console.log(card);
+    let htm = '';
+    card.courses.forEach(item => {
+        htm += `<div class="clicky " onclick="inputInfo('${item.image}')"> <img src="${item.image}" alt="golf course"><span>${item.name}</span></div>`;
+    });
+    document.getElementById('navLinks').innerHTML = htm;
+}
