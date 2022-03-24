@@ -14,10 +14,16 @@ async function fetchHole(){
         
 }
 function displayCard(card){
-    console.log(card);
     let htm = '';
     card.courses.forEach(item => {
-        htm += `<div class="clicky " onclick="inputInfo('${item.image}')"> <img src="${item.image}" alt="golf course"><span>${item.name}</span></div>`;
+        htm += `<div class="clicky "> <img src="${item.image}" alt="golf course">
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+        ${item.name}
+        </label>
+      </div>
+      </div>`;
     });
     document.getElementById('navLinks').innerHTML = htm;
 }
