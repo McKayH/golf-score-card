@@ -27,17 +27,17 @@ body {
   margin: 0;
 }
 
-#navLinks {
+#couresImgs {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#navLinks .clicky {
+#couresImgs .clicky {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-#navLinks .clicky img {
+#couresImgs .clicky img {
   width: 200px;
   height: 200px;
 }

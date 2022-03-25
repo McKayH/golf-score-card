@@ -1,29 +1,20 @@
 const golfAPI = CoursApi();
 
-golfAPI.then(displayCard);
-const golfHole = fetchHole();
-
+golfAPI.then(displayCourse);
 
 async function CoursApi(){
     const getting = await fetch('https://golf-courses-api.herokuapp.com/courses/')
     return getting.json()
 }
-async function fetchHole(){
-    const getting = await fetch('https://golf-courses-api.herokuapp.com/courses/11819')
-    return getting.json()
-        
-}
-function displayCard(card){
+
+
+function displayCourse(card){
     let htm = '';
+    let img = '';
     card.courses.forEach(item => {
-        htm += `<div class="clicky "> <img src="${item.image}" alt="golf course">
-        <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-        ${item.name}
-        </label>
-      </div>
-      </div>`;
+        img += `<div class="clicky"> <img src="${item.image}" alt="golf course">${item.name}</div>`;
+        htm += `<option value="${item.id}">${item.name}</option>`;
     });
-    document.getElementById('navLinks').innerHTML = htm;
+    document.getElementById('couresImgs').innerHTML = img;
+    document.getElementById('courses').innerHTML += htm;
 }

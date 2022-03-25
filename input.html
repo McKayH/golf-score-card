@@ -9,14 +9,22 @@
     </head>
     <body>
         <div class="container"> 
-            <div class="row row-cols-auto" id="navLinks"></div>
+            <div class="row row-cols-auto">
+                <div class="row row-cols-auto" id="couresImgs"></div>
+                <select class="form-select" aria-label="Default select example" id="courses">
+                    <option value="0" selected>Choose Course...</option>
+                    
+                </select>
+            </div>
         </div>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Choose tee type...</option>
-              <option value="pro">Pro</option>
-              <option value="champion">Champion</option>
-              <option value="women">Women</option>
-              <option value="auto change location">auto change location</option>
+
+          <select class="form-select" aria-label="Default select example" id="tee">
+            <option value="-1" selected>Choose tee type...</option>
+              <option value="0">Pro</option>
+              <option value="1">Champion</option>
+              <option value="2">Men</option>
+              <option value="3">Women</option>
+              <option value="4">auto change location</option>
           </select>
 
         <div class="input-group mb-3">
