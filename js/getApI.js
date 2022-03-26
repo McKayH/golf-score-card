@@ -1,13 +1,13 @@
 const golfAPI = CoursApi();
 
 golfAPI.then(displayCourse);
-
+// gets api
 async function CoursApi(){
     const getting = await fetch('https://golf-courses-api.herokuapp.com/courses/')
     return getting.json()
 }
 
-
+// add img for each course and puts in the ability to select
 function displayCourse(card){
     let htm = '';
     let img = '';

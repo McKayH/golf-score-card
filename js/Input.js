@@ -1,11 +1,13 @@
 const players = [];
+// player data
 class Player{
     constructor(name, scores = []){
         this.name = name;
-        this.id = Math.random() * 100;
+        this.id = Math.floor(Math.random() * 100);
         this.scores = scores;
       }
 }
+// what they choose for their game
 class courseInfo{
   constructor(teeType, couresId){
     this.tee = teeType;
@@ -13,39 +15,24 @@ class courseInfo{
   }
 }
 
-
+// adds player data
 function addPlayer(){
     const val = document.getElementById('name').value;
     const player = new Player(val);
     players.push(player)
     document.getElementById('playerDisplay').innerHTML += `<div class="input-name-dis">${player.name}</div>`
 }
-
+// makes the html page swwitch to the card
 function generateCard(){
   const teeTy = document.getElementById('tee').value;
   const select = document.getElementById('courses').value;
-  
+
   if (players.length && teeTy != -1 && select != 0){
 
     const choice = new courseInfo(teeTy, select);
 
-    document.getElementById('theWhole').innerHTML = `
-    <head>
-    <title>Golf Score Card</title>
-    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <script src="/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src="/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="input.html">Navbar</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    </div>
-    </nav>
-    
+    document.getElementById('page').innerHTML = `
     <div id="page">
-    
     <!-- score card -->
     <div class="container">
     <div class="row">
@@ -89,10 +76,47 @@ function generateCard(){
     <script src="js/getApI.js"></script>
     <script src="js/card.js"></script>
     <script src="js/Input.js"></script>`
+    // goes to card.js
     makeCard(players);
     tableInfo(choice);
   }
   else{
     alert('HAVE NO PLAYERS, OR NO TEE SELECTED, OR NO COURES SELECTED');
   }
+}
+function inputSwings(playerId, holeId){
+  console.log(playerId);
+  players.forEach(ele => {
+    if(ele.id === playerId){
+        const inp = document.getElementById(`${ele.id}Inp`).value;
+        ele.scores.push(parseInt(inp));
+        console.log(ele.scores);
+        document.getElementById(`${holeId}`).innerHTML = `<span>${inp}</span>`
+        let addOut = 0;
+        for (let i = 0; i < ele.scores.length; i++) {
+          const element = ele.scores[i];
+          if (i < 9) {
+            addOut += element;
+          }
+        }
+        document.getElementById(`${ele.name}Out`).innerHTML = `<span>${addOut}</span>`
+        let addIn = 0;
+        for (let t = 0; t < ele.scores.length; t++) {
+          const element = ele.scores[t];
+          if (t >= 9) {
+            addIn += element;
+          }
+        }
+        document.getElementById(`${ele.name}In`).innerHTML = `<span>${addIn}</span>`
+        let add = 0;
+        for (let f = 0; f < ele.scores.length; f++) {
+          const element = ele.scores[f];
+          console.log(element);
+          add += element;
+          console.log(add);
+        }
+        document.getElementById(`${ele.name}Tot`).innerHTML = `<span>${add}</span>`
+      }
+  });
+
 }
